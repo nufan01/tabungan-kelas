@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Inertia Progress Bar - tipis di bagian atas */
+#nprogress .bar {
+    height: 3px !important;
+}
