@@ -1,1 +1,1 @@
-web: php artisan migrate --force && apache2-foreground
+web: php artisan migrate --force
