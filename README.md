@@ -1,10 +1,10 @@
-# 🏺 Celengan Toga - Sistem Tabungan Kelas
+# 🏺 Tablas - Sistem Tabungan Kelas
 
 [![Laravel](https://img.shields.io/badge/Laravel-11.x-FF2D20?style=for-the-badge&logo=laravel)](https://laravel.com)
 [![Vue](https://img.shields.io/badge/Vue.js-3.x-4FC08D?style=for-the-badge&logo=vue.js)](https://vuejs.org)
 [![TailwindCSS](https://img.shields.io/badge/Tailwind-3.x-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com)
 
-**Celengan Toga** adalah aplikasi manajemen tabungan kelas yang dirancang untuk transparansi keuangan antara bendahara dan siswa. Dibangun menggunakan stack modern **Laravel (Inertia.js)** dan **Vue.js**.
+**Tablas** adalah aplikasi manajemen tabungan kelas yang dirancang untuk transparansi keuangan antara bendahara dan siswa. Dibangun menggunakan stack modern **Laravel (Inertia.js)** dan **Vue.js**.
 
 ## ✨ Fitur Utama
 
