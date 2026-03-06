@@ -19,7 +19,7 @@
 -   **Backend**: Laravel 11
 -   **Frontend**: Vue.js 3 (Inertia.js)
 -   **Styling**: Tailwind CSS
--   **Database**: MySQL / MariaDB
+-   **Database**: MySQL
 -   **Icons**: Heroicons
 
 ## 🛠️ Instalasi Lokal
@@ -28,5 +28,5 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek di perangkat Anda:
 
 1. **Clone Repository**
    ```bash
-   git clone [https://github.com/USERNAME_ANDA/celengan-toga.git](https://github.com/USERNAME_ANDA/celengan-toga.git)
+   git clone [https://github.com/USERNAME_ANDA/tabungan-kelas.git](https://github.com/USERNAME_ANDA/tabungan-kelas.git)
    cd celengan-toga
