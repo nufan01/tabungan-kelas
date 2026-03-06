@@ -29,4 +29,4 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek di perangkat Anda:
 1. **Clone Repository**
    ```bash
    git clone [https://github.com/USERNAME_ANDA/tabungan-kelas.git](https://github.com/USERNAME_ANDA/tabungan-kelas.git)
-   cd celengan-toga
+   cd tabungan-kelas
