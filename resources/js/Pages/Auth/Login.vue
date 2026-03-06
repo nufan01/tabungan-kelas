@@ -69,13 +69,6 @@ const submit = () => {
                 <div class="mt-6 space-y-1">
                     <div class="flex justify-between items-center">
                         <InputLabel for="password" value="Kata Sandi" class="text-slate-700 font-semibold" />
-                        <Link
-                            v-if="canResetPassword"
-                            :href="route('password.request')"
-                            class="text-xs font-medium text-indigo-600 hover:text-indigo-500 transition"
-                        >
-                            Lupa sandi?
-                        </Link>
                     </div>
                     <TextInput
                         id="password"
@@ -116,10 +109,6 @@ const submit = () => {
                 </div>
             </form>
         </div>
-        
-        <p class="mt-8 text-slate-400 text-xs tracking-widest uppercase font-medium">
-            &copy; 2026 Celengan Toga Security
-        </p>
     </div>
 </template>
 

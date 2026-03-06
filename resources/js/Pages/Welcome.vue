@@ -53,40 +53,41 @@ const handleCheckSaldo = async () => {
     <div class="min-h-screen bg-gray-50 selection:bg-indigo-500 selection:text-white">
         <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between h-16 items-center">
-                    <div class="flex items-center gap-2">
-                        <div class="flex shrink-0 items-center">
-                            <Link :href="route('dashboard')">
-                                <div class="flex items-center gap-3 group">
-                                    <svg viewBox="0 0 100 100" class="w-10 h-10 drop-shadow-sm flex-shrink-0" xmlns="http://www.w3.org/2000/svg">
-                                        <defs>
-                                            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                <stop offset="0%" style="stop-color:#4f46e5" />
-                                                <stop offset="100%" style="stop-color:#9333ea" />
-                                            </linearGradient>
-                                        </defs>
-                                        <path d="M20,55 C20,35 35,25 55,25 C75,25 85,35 85,55 C85,70 75,80 55,80 C45,80 35,78 20,70 L20,55" fill="url(#logoGrad)" />
-                                        <path d="M50,25 L60,15 L70,25" fill="#4f46e5" />
-                                        <rect x="50" y="35" width="10" height="3" rx="1.5" fill="white" />
-                                        <path d="M45,20 L65,20 L75,30 L55,30 Z" fill="#1e1b4b" />
-                                        <path d="M60,30 L60,35" stroke="#1e1b4b" stroke-width="2" />
-                                        <circle cx="75" cy="50" r="2" fill="white" />
-                                    </svg>
-                                    <div class="flex flex-col leading-none">
-                                        <span class="text-[20px] font-black uppercase tracking-widest text-gray-1500">
-                                            Simpanan
-                                          <span class="text-[20px] font-black uppercase tracking-widest text-indigo-800">
-                                            Siswa
-                                          </span>
-                                        </span>
-                                    </div>
+                <div class="flex justify-between h-16 items-center gap-2">
+                    <div class="flex shrink-0 items-center">
+                        <Link :href="route('dashboard')">
+                            <div class="flex items-center gap-2 sm:gap-3 group">
+                                <svg viewBox="0 0 100 100" class="w-8 h-8 sm:w-10 sm:h-10 drop-shadow-sm flex-shrink-0" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#4f46e5" />
+                                            <stop offset="100%" style="stop-color:#9333ea" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path d="M20,55 C20,35 35,25 55,25 C75,25 85,35 85,55 C85,70 75,80 55,80 C45,80 35,78 20,70 L20,55" fill="url(#logoGrad)" />
+                                    <path d="M50,25 L60,15 L70,25" fill="#4f46e5" />
+                                    <rect x="50" y="35" width="10" height="3" rx="1.5" fill="white" />
+                                    <path d="M45,20 L65,20 L75,30 L55,30 Z" fill="#1e1b4b" />
+                                    <path d="M60,30 L60,35" stroke="#1e1b4b" stroke-width="2" />
+                                    <circle cx="75" cy="50" r="2" fill="white" />
+                                </svg>
+                                <div class="flex flex-col leading-none">
+                                    <span class="text-sm sm:text-[20px] font-black uppercase tracking-wider sm:tracking-widest text-gray-800">
+                                        Simpanan
+                                        <span class="text-indigo-600">Siswa</span>
+                                    </span>
                                 </div>
-                            </Link>
-                        </div>
+                            </div>
+                        </Link>
                     </div>
-                    <div v-if="canLogin">
-                        <Link v-if="$page.props.auth.user" :href="route('dashboard')" class="text-indigo-600 font-medium">Dashboard</Link>
-                        <Link v-else :href="route('login')" class="bg-indigo-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition">Login Bendahara</Link>
+
+                    <div v-if="canLogin" class="flex items-center">
+                        <Link v-if="$page.props.auth.user" :href="route('dashboard')" class="text-indigo-600 font-medium text-sm sm:text-base">Dashboard</Link>
+                        <Link v-else :href="route('login')" 
+                            class="bg-indigo-600 text-white px-3 py-2 sm:px-5 sm:py-2.5 rounded-lg text-xs sm:text-sm font-bold hover:bg-indigo-700 transition shadow-md shadow-indigo-100 whitespace-nowrap"
+                        >
+                            Login <span class="hidden sm:inline">Bendahara</span>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -102,7 +103,7 @@ const handleCheckSaldo = async () => {
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                         <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                            <p class="text-sm font-medium text-gray-500 mb-1">Total Saldo Kas</p>
+                            <p class="text-sm font-medium text-gray-500 mb-1">Total Saldo Tabungan</p>
                             <h2 class="text-2xl font-bold text-emerald-600">{{ formatRupiah(totalBalance ) }}</h2>
                         </div>
                         <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
@@ -165,7 +166,7 @@ const handleCheckSaldo = async () => {
         </main>
         <footer class="py-12 border-t border-slate-200 bg-white text-center">
             <p class="text-slate-500 text-sm">
-                &copy; 2026 Tabungan Kelas - Real-time Database System.
+                &copy; 2026 Tabungan Kelas - Goes To Bali
             </p>
         </footer>
     </div>
